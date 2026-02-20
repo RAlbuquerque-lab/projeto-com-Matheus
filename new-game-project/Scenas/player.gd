@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = direction.z * SPEED * delta
 		
 		var target_angle = atan2(direction.x, direction.z)
-		global_rotation.y = lerp_angle(rotation.y, target_angle, 10 * delta)
+		mesh.global_rotation.y = lerp_angle(mesh.rotation.y, target_angle, 10 * delta)
 		
 		animation_player.play("walk")
 		
