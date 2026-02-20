@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0lgypfjv3y83"]
+[gd_scene format=3 uid="uid://c0lgypfjv3y83"]
 
 [ext_resource type="Texture2D" uid="uid://ceopsqgrrsvsu" path="res://sprite/Player.png" id="1_kdenv"]
 [ext_resource type="Texture2D" uid="uid://eqm1ccm6x5ln" path="res://sprite/Coin.png" id="2_ma4g8"]

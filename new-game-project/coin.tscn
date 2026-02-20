@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxknvnwkun42j"]
+[gd_scene format=3 uid="uid://cxknvnwkun42j"]
 
 [ext_resource type="Texture2D" uid="uid://eqm1ccm6x5ln" path="res://sprite/Coin.png" id="1_d5gmh"]
 
