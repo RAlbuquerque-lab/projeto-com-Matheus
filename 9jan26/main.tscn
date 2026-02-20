@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://hwio3bnovh48"]
+
+[ext_resource type="Texture2D" uid="uid://ceopsqgrrsvsu" path="res://sprite/Player.png" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite challenge" type="Sprite2D" parent="."]
+position = Vector2(445.00006, 186.00002)
+scale = Vector2(1.5, 1.494)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite challenge2" type="Sprite2D" parent="."]
+position = Vector2(533, 71.000015)
+rotation = 0.7853982
+scale = Vector2(1, 0.996)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite challenge4" type="Sprite2D" parent="."]
+position = Vector2(577, 190)
+rotation = -0.04285187
+scale = Vector2(1, 0.996)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite challenge5" type="Sprite2D" parent="."]
+position = Vector2(544, 308.99997)
+rotation = 2.2839448
+scale = Vector2(1, 0.996)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite challenge6" type="Sprite2D" parent="."]
+position = Vector2(361, 321)
+rotation = -2.320867
+scale = Vector2(1, 0.996)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite challenge7" type="Sprite2D" parent="."]
+position = Vector2(311, 201)
+rotation = -0.041472256
+scale = Vector2(1, 0.996)
+texture = ExtResource("1_ig7tw")
+
+[node name="Sprite challenge9" type="Sprite2D" parent="."]
+position = Vector2(351, 76.99999)
+rotation = -0.71627724
+scale = Vector2(1, 0.996)
+texture = ExtResource("1_ig7tw")

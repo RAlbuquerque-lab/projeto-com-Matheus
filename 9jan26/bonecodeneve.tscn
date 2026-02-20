@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://wp2hrotuook6"]
+
+[ext_resource type="Material" uid="uid://cqwsbt5unqbit" path="res://Materials/Material 1.tres" id="1_6xiup"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rnpl8"]
+radius = 0.75
+height = 1.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_uedkr"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_c654v"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yobeu"]
+size = Vector3(1, 1, 0.3)
+
+[node name="Bonecodeneve" type="Node3D"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9996646, 0.02589779, 0, -0.02589779, 0.9996646, 0, 0, 0, 1, 0.03614664, 1.2696443, 0)
+material_override = ExtResource("1_6xiup")
+mesh = SubResource("SphereMesh_rnpl8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9999982, 0.0019373167, 0, -0.0019373167, 0.9999982, 0, 0, 0, 1, -0.008808732, -0.17071867, -0.0019369125)
+material_override = ExtResource("1_6xiup")
+mesh = SubResource("SphereMesh_uedkr")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9996646, 0.02589779, 0, -0.02589779, 0.9996646, 0, 0, 0, 1, 0.07681082, 2.3811474, 0)
+material_override = ExtResource("1_6xiup")
+mesh = SubResource("SphereMesh_c654v")
+skeleton = NodePath("../MeshInstance3D2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.6088767, 0, 0, 0, 0.2914627, 0, 0, 0, 1, -0.031780243, 1.2920209, 0.17118073)
+material_override = ExtResource("1_6xiup")
+mesh = SubResource("BoxMesh_yobeu")

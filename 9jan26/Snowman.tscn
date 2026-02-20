@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://let3q0aryobs"]
+
+[ext_resource type="Material" uid="uid://cqwsbt5unqbit" path="res://Materials/Material 1.tres" id="1_pbnak"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_t0hki"]
+lightmap_size_hint = Vector2i(33, 9)
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_oj4ev"]
+radius = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_q1wke"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Snowman" type="Node3D" parent="."]
+transform = Transform3D(1.4855163, -0.5618839, 0.62836474, 0.17110105, 4.11532, 0.11994399, -0.9413637, -0.13868284, 1.0133901, 0.824, -2.022054, 1.118)
+
+[node name="Torso" type="MeshInstance3D" parent="Snowman"]
+transform = Transform3D(-0.118991956, -0.0024403604, 0.5757527, 0.0239234, 0.48553866, 0.005261818, -0.8415203, 0.014148351, -0.08126256, 0.14018804, 0.5908532, 0.19168699)
+mesh = SubResource("SphereMesh_t0hki")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_pbnak")
+
+[node name="Head" type="MeshInstance3D" parent="Snowman"]
+transform = Transform3D(-0.2835839, 3.4458935e-08, 1.4901161e-08, -5.5879354e-09, 0.23537712, 2.7939677e-09, 5.9604645e-08, 2.0489097e-08, 0.47243893, 0.45726368, 0.85686755, 0.3470267)
+mesh = SubResource("SphereMesh_t0hki")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_pbnak")
+
+[node name="Legs" type="MeshInstance3D" parent="Snowman"]
+transform = Transform3D(1.116865, 0.022276305, 0.034166574, -0.030539295, 0.86038184, 0.08682027, -0.025627136, -0.054460883, 1.3855761, 0.005615592, 0.0001502037, -0.013142586)
+material_override = ExtResource("1_pbnak")
+mesh = SubResource("SphereMesh_oj4ev")
+skeleton = NodePath("../..")
+
+[node name="Arms" type="MeshInstance3D" parent="Snowman"]
+transform = Transform3D(2.941182, 0.018960897, -0.058465537, -0.21138974, 0.07552721, -0.0012963342, 2.7034454, 0.026173662, 0.13705917, 0.117099166, 0.6283425, 0.46697974)
+mesh = SubResource("BoxMesh_q1wke")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_pbnak")

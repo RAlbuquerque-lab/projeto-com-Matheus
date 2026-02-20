@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://blav1k04m1sk1"]
+
+[ext_resource type="PackedScene" uid="uid://80ur7qf01ynh" path="res://Scenas/Player.tscn" id="1_jk583"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sjx2a"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_6vaen"]
+sky_material = SubResource("ProceduralSkyMaterial_sjx2a")
+
+[sub_resource type="Environment" id="Environment_y0o2v"]
+background_mode = 2
+sky = SubResource("Sky_6vaen")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_6vaen"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y0o2v"]
+size = Vector3(10, 1, 10)
+
+[node name="Testelevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_y0o2v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.82574856, -0.490884, 0.2777987, 0.5580929, -0.639754, 0.52843827, -0.08167904, 0.5913947, 0.8022348, 0, 10, 0.106402874)
+shadow_enabled = true
+directional_shadow_split_3 = 0.356
+directional_shadow_max_distance = 1.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2678355, 0)
+mesh = SubResource("BoxMesh_6vaen")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_y0o2v")
+
+[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_jk583")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26642656, 1.4805102, -0.22306728)
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.99994665, 0.010332167, 0, -0.010332166, 0.99994665, 0, 0, 0, 1, -0.1485343, 1.3178307, 1.333035)
+current = true

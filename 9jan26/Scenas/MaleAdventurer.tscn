@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b37ky0jv5hdie"]
+
+[ext_resource type="PackedScene" uid="uid://c46veyakfrrna" path="res://sprite/male_adventurer (1)/scene.gltf" id="1_sqor3"]
+
+[node name="MaleAdventurer" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_sqor3")]
