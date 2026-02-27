@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://blav1k04m1sk1"]
+[gd_scene format=3 uid="uid://blav1k04m1sk1"]
 
 [ext_resource type="PackedScene" uid="uid://80ur7qf01ynh" path="res://Scenas/Player.tscn" id="1_jk583"]
 
@@ -21,30 +21,30 @@ size = Vector3(10, 1, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_y0o2v"]
 size = Vector3(10, 1, 10)
 
-[node name="Testelevel" type="Node3D"]
+[node name="Testelevel" type="Node3D" unique_id=31772477]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1937640826]
 environment = SubResource("Environment_y0o2v")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=170043664]
 transform = Transform3D(-0.82574856, -0.490884, 0.2777987, 0.5580929, -0.639754, 0.52843827, -0.08167904, 0.5913947, 0.8022348, 0, 10, 0.106402874)
 shadow_enabled = true
 directional_shadow_split_3 = 0.356
 directional_shadow_max_distance = 1.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2012999680]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1280288969]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2678355, 0)
 mesh = SubResource("BoxMesh_6vaen")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=722441455]
 shape = SubResource("BoxShape3D_y0o2v")
 
-[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_jk583")]
+[node name="Player" parent="." unique_id=2005477976 node_paths=PackedStringArray("camera") instance=ExtResource("1_jk583")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26642656, 1.4805102, -0.22306728)
 camera = NodePath("../Camera3D")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1646250162]
 transform = Transform3D(0.99994665, 0.010332167, 0, -0.010332166, 0.99994665, 0, 0, 0, 1, -0.1485343, 1.3178307, 1.333035)
 current = true
