@@ -1,6 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://crgw2rpnkstss"]
+[gd_scene format=3 uid="uid://crgw2rpnkstss"]
 
+[ext_resource type="PackedScene" uid="uid://ci6oajqpyo6w8" path="res://Scenas/CartaUI.tscn" id="1_612bm"]
 [ext_resource type="PackedScene" uid="uid://80ur7qf01ynh" path="res://Scenas/Player.tscn" id="1_sjx2a"]
+[ext_resource type="PackedScene" uid="uid://cbvay8smjm8um" path="res://Scenas/Escrivaninha.tscn" id="3_rjhdi"]
+[ext_resource type="PackedScene" uid="uid://w3e3xkoejema" path="res://Scenas/Globo terrestre.tscn" id="4_488hp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sjx2a"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,30 +24,41 @@ size = Vector3(10, 1, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_y0o2v"]
 size = Vector3(10, 1, 10)
 
-[node name="Testelevel" type="Node3D"]
+[node name="Testelevel" type="Node3D" unique_id=1808862683]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="CartaUi" parent="." unique_id=167702143 instance=ExtResource("1_612bm")]
+offset_left = 607.9502
+offset_top = 195.15118
+offset_right = 1822.9502
+offset_bottom = 1209.1511
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1833275453]
 environment = SubResource("Environment_y0o2v")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2048498716]
 transform = Transform3D(-0.82574856, -0.490884, 0.2777987, 0.5580929, -0.639754, 0.52843827, -0.08167904, 0.5913947, 0.8022348, 0, 10, 0.106402874)
 shadow_enabled = true
 directional_shadow_split_3 = 0.356
 directional_shadow_max_distance = 1.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=412967363]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=67337303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2678355, 0)
 mesh = SubResource("BoxMesh_6vaen")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1258278793]
 shape = SubResource("BoxShape3D_y0o2v")
 
-[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_sjx2a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26642656, 1.4805102, -0.22306728)
+[node name="Player" parent="." unique_id=1652123464 node_paths=PackedStringArray("camera") instance=ExtResource("1_sjx2a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.067887, 1.1729013, 0.9836302)
 camera = NodePath("../Camera3D")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=575897031]
 transform = Transform3D(0.99994665, 0.010332167, 0, -0.010332166, 0.99994665, 0, 0, 0, 1, -0.1485343, 1.3178307, 1.333035)
 current = true
+
+[node name="Escrivaninha" parent="." unique_id=1496936283 instance=ExtResource("3_rjhdi")]
+
+[node name="GloboTerrestre" parent="." unique_id=2053170992 instance=ExtResource("4_488hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53229773, 0.838514, -0.84661317)

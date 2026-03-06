@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ctn2sx6dckqv2" path="res://sprite/male_adventurer (1)/textures/Adventurer_normal.png" id="3_1r0tn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oew7p"]
-height = 2.2998047
+height = 1.8952026
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdatj"]
 resource_name = "Adventurer"
@@ -11384,7 +11384,7 @@ mesh = NodePath("MaleAdventurer")
 animation_player = NodePath("MaleAdventurer/Sketchfab_Scene/AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1173583864]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16874194, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12928271, 0)
 shape = SubResource("CapsuleShape3D_oew7p")
 
 [node name="MaleAdventurer" type="Node3D" parent="." unique_id=374165611]
@@ -11894,7 +11894,6 @@ transform = Transform3D(-0.9998, 0.01979, 0.00203, 0.0196, 0.99733, -0.07028, -0
 [node name="corpo_0" type="MeshInstance3D" parent="MaleAdventurer/Sketchfab_Scene/Sketchfab_model/Root/Rig/Skeleton3D" unique_id=318551869]
 mesh = SubResource("ArrayMesh_gbsen")
 skin = SubResource("Skin_421pr")
-skeleton = NodePath("..")
 
 [node name="corpo" type="Node3D" parent="MaleAdventurer/Sketchfab_Scene/Sketchfab_model/Root/Rig" unique_id=1108103799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01009, 0.01737)

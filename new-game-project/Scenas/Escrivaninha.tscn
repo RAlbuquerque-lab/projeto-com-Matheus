@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cbvay8smjm8um"]
+
+[ext_resource type="PackedScene" uid="uid://d271wqari3ufn" path="res://Assets/3D Models/office_desk_-_18mb/scene.gltf" id="1_gg51e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vn1af"]
+size = Vector3(3.3117573, 1.234993, 1.2844238)
+
+[node name="Escrivaninha" type="StaticBody3D" unique_id=1496936283]
+collision_layer = 2
+
+[node name="Sketchfab_Scene" parent="." unique_id=1421496278 instance=ExtResource("1_gg51e")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1569109022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08709538, 0.48666763, -0.14221191)
+shape = SubResource("BoxShape3D_vn1af")

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ci6oajqpyo6w8"]
+
+[ext_resource type="Texture2D" uid="uid://o7ts7ji3oebo" path="res://Assets/Carta.png" id="1_j18ff"]
+
+[node name="CartaUi" type="Control" unique_id=167702143]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 230.0
+offset_top = 24.0
+offset_right = 1445.0
+offset_bottom = 1038.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2016071372]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.184
+anchor_bottom = 1.286
+offset_left = 475.0
+offset_top = -167.0
+offset_right = -905.5281
+offset_bottom = -304.33203
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j18ff")
