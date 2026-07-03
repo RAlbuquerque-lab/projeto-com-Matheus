@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dfb52bwe22osn"]
+
+[ext_resource type="FontFile" uid="uid://d10b3c1p1gcs5" path="res://Assets/Fonts/Orbitron-Bold.ttf" id="1_b3ktl"]
+
+[node name="ButtonPressUi" type="CanvasLayer" unique_id=1243138973]
+
+[node name="Label" type="Label" parent="." unique_id=528570006]
+offset_left = 828.0
+offset_top = 201.0
+offset_right = 1053.0
+offset_bottom = 265.0
+theme_override_colors/font_color = Color(0.2509804, 0.9019608, 0.8980392, 1)
+theme_override_fonts/font = ExtResource("1_b3ktl")
+theme_override_font_sizes/font_size = 35
+text = "Press X"

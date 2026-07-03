@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bc535s2u78a0j"
+
+[deps]
+
+files=["res://Localizacao/LocalGodot4.en.translation", "res://Localizacao/LocalGodot4.pt.translation", "res://Localizacao/LocalGodot4.fr.translation"]
+
+source_file="res://Localizacao/LocalGodot4.csv"
+dest_files=["res://Localizacao/LocalGodot4.en.translation", "res://Localizacao/LocalGodot4.pt.translation", "res://Localizacao/LocalGodot4.fr.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

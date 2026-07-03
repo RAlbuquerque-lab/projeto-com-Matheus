@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b14ojvakp6c2p" path="res://Assets/3D Models/globe/scene.gltf" id="2_4hb76"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_00hyd"]
-radius = 0.58783376
+radius = 0.45572576
 
 [node name="GloboTerrestre" type="Area3D" unique_id=2053170992]
 script = ExtResource("1_3mai1")
@@ -14,6 +14,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2225954, 0.068176866, -0.4
 shape = SubResource("SphereShape3D_00hyd")
 
 [node name="Sketchfab_Scene" parent="." unique_id=1924533281 instance=ExtResource("2_4hb76")]
-transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, -0.00023978949, 0.0125750005, 0)
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, -0.025771052, 0.07924819, -0.032402694)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
